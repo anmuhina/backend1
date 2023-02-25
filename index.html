@@ -10,5 +10,14 @@
   <img src="screen_http_head.png">
   <h2>Getting media-type</h2>
   <img src="screen_http_mediatype.png">
+  
+  <?php
+header('Content-Type: text/html; charset=UTF-8');
+print('Привет, мир!');
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+ print_r($_POST);
+}
+?>
+  
   </body>
 </html>
