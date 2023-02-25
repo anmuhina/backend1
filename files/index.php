@@ -1,23 +1,6 @@
 <?php
-
-// Отправляем правильную кодировку.
-/*header('HTTP/1.1 404 Not Found');*/
 header('Content-Type: text/html; charset=UTF-8');
-
-// Выводим все полученные через POST параметры.
-// если запрос 2-5) сделан правильно, то можно будет увидеть
-// отправленный комментарий в ответе веб-сервера.
-print_r($_POST);
-
-
-// Чтобы получить в переменную данные из сущности запроса.
-/*$xml = file_get_contents('php://input');
-
-if (isset($v1)) {
-  $v1++;
-}
-else {
-  $v1 = 1;
-}
-print($v1);*/
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  print_r($_POST);
+  }
 ?>
